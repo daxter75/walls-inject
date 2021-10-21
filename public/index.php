@@ -3,11 +3,9 @@
 require_once '../vendor/autoload.php';
 require_once '../config/config.php';
 
-$inject = new Inject(
-    INIT_ARRAY,
-    AFTER_KEY,
-    NEW_KEY,
-    NEW_VALUE
-);
+$controller = new Controller();
+
+$inject = $controller->getInject();
+$display = $controller->getDisplay();
 
 require_once '../views/home.php';

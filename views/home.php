@@ -28,7 +28,7 @@
                         <p>Inject after key: <?= AFTER_KEY ?></p>
                         <p>New key: <?= NEW_KEY ?></p>
                         <p>New value: <?= NEW_VALUE ?></p>
-                        <p class="pt-4">Return: <?php print_r($inject->getInjected()) ?></p>
+                        <p class="pt-4">Injected array: <?php print_r($inject) ?></p>
                     </div>
                 </div>
 
@@ -41,7 +41,7 @@
             <div class="p-6 bg-indigo-50">
                 <div class="my-2">
                     <span class="text-xs font-medium text-indigo-600 uppercase">Description</span>
-                    <p class="mt-2 text-sm text-gray-600">Imagine a <a href="https://en.wikipedia.org/wiki/Seven-segment_display" class="text-indigo-600 hover:text-green-600" target="_blank">seven-segment display</a> used for a digital alarm clock. The clock has 4 seven-segment displays and is displaying times in 24-hour-format, so from 00:00 to 23:59.
+                    <p class="mt-2 text-sm text-gray-600">Imagine a <a href="https://en.wikipedia.org/wiki/Seven-segment_display" class="text-indigo-600 hover:text-indigo-900" target="_blank">seven-segment display</a> used for a digital alarm clock. The clock has 4 seven-segment displays and is displaying times in 24-hour-format, so from 00:00 to 23:59.
                         Every segment of every display is powered by a single LED (so the clock has a total of 4x7 = 28 LEDs) and every LED uses the same amount of power. This means that the least amount of power is used at 11:11, because only 8 LEDs (2 for each digit) are lit up.
                         Your task: Write a script to programmatically determine the time at which the most amount of power is used by the clock. Only valid times are allowed (so 23:88 is not a valid time, for example).You can choose either PHP or JavaScript for Part 2.
                     </p>
@@ -50,11 +50,12 @@
                 <div class="my-4">
                     <span class="text-xs font-medium text-indigo-600 uppercase">Result</span>
                     <div class="mt-2 text-sm text-gray-600">
-                        <p>Init array: <?php print_r(INIT_ARRAY) ?></p>
-                        <p>Inject after key: <?= AFTER_KEY ?></p>
-                        <p>New key: <?= NEW_KEY ?></p>
-                        <p>New value: <?= NEW_VALUE ?></p>
-                        <p class="pt-4">Result: <?php print_r($inject->getInjected()) ?></p>
+                        <p>Clock consume max power amount at
+                            <span>
+                                <?= $display['hours'] ?> : <?= $display['minutes'] ?>
+                                (<?= $display['totalSegments'] ?> LEDs on!)
+                            </span>
+                        </p>
                     </div>
                 </div>
 
@@ -68,13 +69,6 @@
             </div>
         </div>
 
-
-        <section>
-            <h1>Seven-segment display</h1>
-
-            <p></p>
-
-        </section>
     </div>
 
 <?php include_once 'footer.php' ?>
