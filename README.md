@@ -13,13 +13,14 @@
 
 ### Requirements
 
-- php 7.4 +
+- php 8.0 +
 - composer
 
 ### Steps
 
 - pull code from GitHub
 - composer install
+- start PHPUnit tests
 
 ## Description
 
