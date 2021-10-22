@@ -21,18 +21,18 @@
 - pull code from GitHub
 - composer install
 - start PHPUnit tests
+- type "php index.php" in terminal to show results 
 
 ## Description
 
 Tasks realized like classes: Inject and Display.  
 Class Inject has tests.  
-Results of these tasks can show using web server and open url in any web browser. The app is optimized for desktop and mobile devices.  
+Results of these tasks can show using terminal.  
 Parameters for Inject task are in config/config.php
 
 ## Used technologies
 
 - [PHP](https://php.net/)
-- [Tailwind CSS](https://tailwindcss.com/)
 
 
 ## Contributors
